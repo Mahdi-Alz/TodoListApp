@@ -11,7 +11,7 @@
     <body class="flex gap-[14%]">
         <!-- ------------------------------- sidebar ------------------------------- -->
         <aside
-            class="flex flex-col w-[19%] py-5 pr-5 my-5 mr-5 shadow-[0_0_15px_rgba(0,0,0,0.1)]"
+            class="flex flex-col w-[19%] py-5 pr-5 my-5 mr-5 shadow-[0_0_15px_rgba(0,0,0,0.1)] min-w-[274px]"
         >
             <!-- --------------------------- profile details --------------------------- -->
             <div class="profile flex">
@@ -84,7 +84,7 @@
                 <!-- ------------------------ before click new task ------------------------ -->
                 <button
                     id="add-task-btn"
-                    class="border border-dashed border-gray-300 rounded-lg text-blue-500 p-4 w-full text-right"
+                    class="border border-dashed border-gray-300 rounded-lg text-blue-500 p-4 w-full text-right mb-4"
                 >
                     + افزودن وظیفه جدید
                 </button>
@@ -92,7 +92,7 @@
                 <form
                     id="add-task-form"
                     action=""
-                    class="hidden flex flex-col border border-gray-150 rounded-lg p-4 shadow-[0_0_15px_rgba(0,0,0,0.1)]"
+                    class="flex flex-col border border-gray-150 rounded-lg p-4 shadow-[0_0_15px_rgba(0,0,0,0.1)]"
                 >
                     <input type="text" placeholder="نام تسک" class="mb-2" />
                     <textarea
@@ -149,6 +149,7 @@
                 <ul>
                     <li>
                         <div class="priority-bar"></div>
+
                         <div class="task-content">
                             <input type="checkbox" />
                             <div class="flex flex-col gap-2">
@@ -161,18 +162,19 @@
                                 <p>جلسه با محسن یگانه و مریم جلالی</p>
                             </div>
                         </div>
+
                         <div class="task-menu">
                             <button id="edit-delete-toggle">⋮</button>
-                            <div id="menu-dropdpwn" class="menu-dropdown">
-                                <button>
-                                    <img
-                                        src="./src/assets/icons/task-delete.png"
-                                    />
-                                </button>
-                                <span>|</span>
-                                <button>
+                            <div id="edit-delete-dropdown">
+                                <button id="edit-button">
                                     <img
                                         src="./src/assets/icons/task-edit.png"
+                                    />
+                                </button>
+                                <span class="text-gray-300">|</span>
+                                <button id="delete-button">
+                                    <img
+                                        src="./src/assets/icons/task-delete.png"
                                     />
                                 </button>
                             </div>
